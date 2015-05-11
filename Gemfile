@@ -8,6 +8,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets'
 gem 'sqlite3'
 gem 'bcrypt-ruby'
+gem 'faker', '1.1.2'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
