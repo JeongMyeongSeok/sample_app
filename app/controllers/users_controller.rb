@@ -54,13 +54,6 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-  def signed_in_user
-    unless signed_in? #if you not login
-      store_location
-      flash[:notice] = "Please sign in.."
-      redirect_to signin_url #redirect_to signin_path同じ
-    end
-  end
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_path) unless current_user?(@user)

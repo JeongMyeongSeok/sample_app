@@ -27,6 +27,14 @@ module SessionsHelper
     user == current_user # 同じ結果 @current_user also self.current_user
   end
 
+  def signed_in_user
+    unless signed_in? #if you not login
+      store_location
+      flash[:notice] = "Please sign in.."
+      redirect_to signin_url #redirect_to signin_path同じ
+    end
+  end
+  
   #9.2.3
   def redirect_back_or(default)
     redirect_to(session[:return_to] || default) #or default
